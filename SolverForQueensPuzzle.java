@@ -13,7 +13,7 @@ public class SolverForQueensPuzzle {
 
     ArrayList< BoardForQueensPuzzle> solutions;
     BoardForQueensPuzzle inProgress; // for finding the next solution
-
+    
     // data for measuring difficulty
     long nBoardsConsidered;    /* number of boards evaluated,
                including incompletely-full and illegal boards */
@@ -66,12 +66,14 @@ public class SolverForQueensPuzzle {
                               // + System.lineSeparator()
                               // + inProgress
                               // );
+            nBoardsConsidered++;
         }
         else if (inProgress.lastIsNg() == true){
             // System.out.println( "  for debugging: base case detected for..."
                               // + System.lineSeparator()
                               // + inProgress
                               // );
+            nBoardsConsidered++;
             return; 
         }
         
